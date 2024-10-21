@@ -22,7 +22,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  flex-grow: 1;
+
   width: 450px;
   height: 650px;
   border: 1px solid grey;
@@ -34,13 +34,25 @@ header {
   padding: 20px;
   text-align: start;
   font-size: 20px;
+  border: 1px solid gray;
+  margin: 14px;
+  border-radius: 20px;
+  background-color: rgba(153, 211, 128, 0.363);
+}
+
+.buttons {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
 }
 
 button {
+  flex: 1 0 20%;
   font-size: 22px;
   height: 60px;
   width: 80px;
-  margin: 8px;
   border: none;
   border-radius: 10px;
   color: black;
@@ -53,5 +65,33 @@ button {
 .multiply,
 .operate {
   color: whitesmoke;
-  background-color: rgb(228, 154, 18);
+  background-color: rgba(88, 122, 7, 0.788);
+}
+
+.clear-row button {
+  flex: 1 0 40%;
+  background-color: rgba(218, 123, 15, 0.74);
+  color: white;
+}
+
+.first-row,
+.second-row,
+.third-row,
+.last-row,
+.clear-row {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+button:hover {
+  border: 1px solid gray;
+}
+
+.add:hover,
+.subtract:hover,
+.devide:hover,
+.multiply:hover,
+.operate:hover {
+  border: 1px solid black;
 }
