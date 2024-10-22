@@ -63,7 +63,7 @@ button {
 .subtract,
 .devide,
 .multiply,
-.operate {
+.equal {
   color: whitesmoke;
   background-color: rgba(88, 122, 7, 0.788);
 }
