@@ -169,3 +169,84 @@ function solve(array) {
     }
   }
 }
+
+document.addEventListener("keydown", function (event) {
+  let cssClass = "";
+  switch (event.key) {
+    // Handle number keys
+    case "0":
+      cssClass = ".\\30";
+      break;
+    case "1":
+      cssClass = ".\\31";
+      break;
+    case "2":
+      cssClass = ".\\32";
+      break;
+    case "3":
+      cssClass = ".\\33";
+      break;
+    case "4":
+      cssClass = ".\\34";
+      break;
+    case "5":
+      cssClass = ".\\35";
+      break;
+    case "6":
+      cssClass = ".\\36";
+      break;
+    case "7":
+      cssClass = ".\\37";
+      break;
+    case "8":
+      cssClass = ".\\38";
+      break;
+    case "9":
+      cssClass = ".\\39";
+      break;
+
+    //handle point
+
+    case ".":
+      cssClass = ".point";
+      break;
+
+    //handle operators
+
+    case "+":
+      cssClass = ".add";
+      break;
+    case "-":
+      cssClass = ".subtract";
+      break;
+    case "*":
+      cssClass = ".multiply";
+      break;
+    case "/":
+      cssClass = ".devide";
+      break;
+
+    //handle del, AC, and enter
+
+    case "Enter":
+      cssClass = ".equal";
+      break;
+
+    case "Escape":
+      cssClass = ".clear";
+      break;
+
+    case "Backspace":
+      cssClass = ".remove";
+      break;
+
+    // Default case to handle unexpected keys
+    default:
+      cssClass = null; // No matching key
+  }
+
+  const clickEvent = new MouseEvent("click", {
+    bubbles: true,
+  });
+  if (cssClass) document.querySelector(cssClass).dispatchEvent(clickEvent);
+});
