@@ -133,8 +133,10 @@ buttons.addEventListener("click", function () {
       if (oper[i]) {
         oper[i] = oper[i].slice(0, -1);
       } else {
-        i--;
-        oper[i] = oper[i].slice(0, -1);
+        if (i !== 0) {
+          i--;
+          oper[i] = oper[i].slice(0, -1);
+        }
       }
       break;
 
